@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aventura na Ilha Misteriosa</title>
+
+<style>
+
+body{
+    background: linear-gradient(#001F3F,#003566);
+    color:white;
+    font-family:Arial, sans-serif;
+    margin:0;
+    padding:20px;
+}
+
+main{
+    max-width:700px;
+    margin:auto;
+}
+
+.passo{
+    display:none;
+    animation: aparecer 0.5s;
+}
+
+.passo.ativo{
+    display:block;
+}
+
+#passo-capa{
+    text-align:center;
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#passo-capa h1{
+    color:#FFD60A;
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+#passo-capa p{
+    font-size:1.2rem;
+}
+
+button{
+    background:#FF4D4D;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    margin:10px 5px;
+    border-radius:10px;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff7070;
+}
+
+.caixa{
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<main>
+
+<!-- CAPA -->
+<div class="passo ativo" id="passo-capa">
+
+    <h1>🏝️ AVENTURA NA ILHA MISTERIOSA</h1>
+
+    <p>
+        Você acorda em uma ilha deserta após um naufrágio.
+        Suas escolhas decidirão seu destino.
+    </p>
+
+    <button class="botao-proximo" data-proximo="0">
+        ▶ INICIAR JOGO
+    </button>
+
+</div>
+
+<!-- PASSO 0 -->
+<div class="passo" id="passo-0">
+
+    <div class="caixa">
+
+        <h2>Passo 0</h2>
+
+        <p>
+            Você acorda numa ilha deserta.
+            Uma trilha leva para a mata e outra para a praia.
+        </p>
+
+        <button class="botao-proximo" data-proximo="1">
+            Ir para a mata
+        </button>
+
+        <button class="botao-proximo" data-proximo="2">
+            Ir para a praia
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PASSO 1 -->
+<div class="passo" id="passo-1">
+
+    <div class="caixa">
+
+        <h2>Passo 1</h2>
+
+        <p>
+            Na mata você ouve um rugido à esquerda e vê uma caverna à direita.
+        </p>
+
+        <button class="botao-proximo" data-proximo="3">
+            Seguir o rugido
+        </button>
+
+        <button class="botao-proximo" data-proximo="4">
+            Entrar na caverna
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PASSO 2 -->
+<div class="passo" id="passo-2">
+
+    <div class="caixa">
+
+        <h2>Passo 2</h2>
+
+        <p>
+            Na praia tem um barco quebrado e uma fogueira apagada ao longe.
+        </p>
+
+        <button class="botao-proximo" data-proximo="5">
+            Consertar o barco
+        </button>
+
+        <button class="botao-proximo" data-proximo="6">
+            Ir até a fogueira
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PASSO 3 -->
+<div class="passo" id="passo-3">
+
+    <div class="caixa">
+
+        <h2>Passo 3</h2>
+
+        <p>
+            O rugido era de um urso. Ele te viu.
+        </p>
+
+        <button class="botao-proximo" data-proximo="7">
+            Correr
+        </button>
+
+        <button class="botao-proximo" data-proximo="8">
+            Fingir de morto
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PASSO 4 -->
+<div class="passo" id="passo-4">
+
+    <div class="caixa">
+
+        <h2>Passo 4</h2>
+
+        <p>
+            Dentro da caverna há um baú e um túnel escuro.
+        </p>
+
+        <button class="botao-proximo" data-proximo="9">
+            Abrir o baú
+        </button>
+
+        <button class="botao-proximo" data-proximo="10">
+            Entrar no túnel
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PASSO 5 -->
+<div class="passo" id="passo-5">
+
+    <div class="caixa">
+
+        <h2>Passo 5</h2>
+
+        <p>
+            Falta madeira. Você vê árvores perto e uma vila ao longe.
+        </p>
+
+        <button class="botao-proximo" data-proximo="12">
+            Cortar árvores
+        </button>
+
+        <button class="botao-proximo" data-proximo="13">
+            Ir até a vila
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PASSO 6 -->
+<div class="passo" id="passo-6">
+
+    <div class="caixa">
+
+        <h2>Passo 6</h2>
+
+        <p>
+            A fogueira foi de outros náufragos.
+            Tem pegadas indo para a floresta e para o mar.
+        </p>
+
+        <button class="botao-proximo" data-proximo="14">
+            Seguir para a floresta
+        </button>
+
+    </div>
+
+</div>
+
+<!-- FINAL 7 -->
+<div class="passo" id="passo-7">
+
+    <div class="caixa">
+
+        <h2>Fim de jogo</h2>
+
+        <p>
+            Você correu, mas o urso foi mais rápido.
+        </p>
+
+        <button class="botao-proximo" data-proximo="capa">
+            Jogar novamente
+        </button>
+
+    </div>
+
+</div>
+
+<!-- FINAL 8 -->
+<div class="passo" id="passo-8">
+
+    <div class="caixa">
+
+        <h2>Você sobreviveu!</h2>
+
+        <p>
+            O urso te cheirou e foi embora.
+        </p>
+
+        <button class="botao-proximo" data-proximo="capa">
+            Jogar novamente
+        </button>
+
+    </div>
+
+</div>
+
+<!-- FINAL 9 -->
+<div class="passo" id="passo-9">
+
+    <div class="caixa">
+
+        <h2>Você venceu!</h2>
+
+        <p>
+            O baú estava cheio de moedas de ouro e um mapa.
+            Você ficou rico e conseguiu sair da ilha.
+        </p>
+
+        <button class="botao-proximo" data-proximo="capa">
+            Jogar novamente
+        </button>
+
+    </div>
+
+</div>
+
+<!-- FINAL 10 -->
+<div class="passo" id="passo-10">
+
+    <div class="caixa">
+
+        <h2>Fim de jogo</h2>
+
+        <p>
+            O túnel era a toca de uma aranha gigante.
+            Você não conseguiu voltar.
+        </p>
+
+        <button class="botao-proximo" data-proximo="capa">
+            Tentar novamente
+        </button>
+
+    </div>
+
+</div>
+
+<!-- FINAL 12 -->
+<div class="passo" id="passo-12">
+
+    <div class="caixa">
+
+        <h2>Você foi resgatado!</h2>
+
+        <p>
+            Você consertou o barco com madeira.
+            Um navio te viu no mar e você foi salvo.
+        </p>
+
+        <button class="botao-proximo" data-proximo="capa">
+            Jogar novamente
+        </button>
+
+    </div>
+
+</div>
+
+<!-- FINAL 13 -->
+<div class="passo" id="passo-13">
+
+    <div class="caixa">
+
+        <h2>Novo lar</h2>
+
+        <p>
+            A vila era de nativos amigáveis.
+            Eles te acolheram e você decidiu morar na ilha.
+        </p>
+
+        <button class="botao-proximo" data-proximo="capa">
+            Jogar novamente
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PASSO 14 -->
+<div class="passo" id="passo-14">
+
+    <div class="caixa">
+
+        <h2>Continua...</h2>
+
+        <p>
+            Você entrou na floresta seguindo as pegadas...
+        </p>
+
+        <button class="botao-proximo" data-proximo="capa">
+            Voltar ao início
+        </button>
+
+    </div>
+
+</div>
+
+</main>
+
+<script>
+
+document.querySelectorAll('.botao-proximo').forEach(botao => {
+
+    botao.onclick = function(){
+
+        let id = this.getAttribute('data-proximo');
+
+        document.querySelector('.ativo').classList.remove('ativo');
+
+        let proximoPasso = document.getElementById('passo-' + id);
+
+        if(proximoPasso){
+            proximoPasso.classList.add('ativo');
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
